@@ -35,7 +35,7 @@ This kind of damage comes with negative side effects. It's meant to restrict the
 
 _**Rage**_
 
-This kind of damage is also primarily Big. It deals massive damage, but also comes with more negative side effects.
+This kind of damage is also primarily big. It deals massive damage, but also comes with more negative side effects.
 
 _**Flow**_
 
@@ -55,7 +55,7 @@ _**Infliction**_
 At the start of the opponent's next turn, deals damage  based on its value and decreases its value by 1
 
 _**Frost**_
-Reduces the damage of the opponents by half (rounded down)
+Reduces your damage dealt by half (rounded down)
 
 _**Weak**_
 Takes double damage from opponents
