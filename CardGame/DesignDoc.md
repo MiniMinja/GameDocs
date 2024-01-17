@@ -19,7 +19,11 @@ You can play your tokens to activate the effects of the potion.
 
 # Card Master List
 
-### Types of Damage:
+## Locations
+
+The mechanic is that you can store your potion in a certain location, each location specializing in each type of damage below. Placing your potion in a corruption location means all corruption effects increase by 1, but all things corruption is _weak_ to (Decisive, Rage) will decrease by 1. Each turn these modifications happen. The longer you store the potion, the stronger it gets.
+
+## Types of Damage:
 
 Overal chart:
 
@@ -52,7 +56,7 @@ This kind of damage is designed to be quick. Its damage is meant to be a priorit
 ### Card Keywords: 
 
 _**Infliction**_
-At the start of the opponent's next turn, deals damage  based on its value and decreases its value by 1
+At the start of the opponent's next turn, deals damage based on its value and decreases its value by 1
 
 _**Frost**_
 Reduces your damage dealt by half (rounded down)
@@ -60,7 +64,8 @@ Reduces your damage dealt by half (rounded down)
 _**Weak**_
 Takes double damage from opponents
 
-
+_**Adaptable**_
+A neutral effect that turns into a specific type when mixed with other ingredients. It goes with the majority of the potion types. If it's a tie between multiple potion types, it will randomly choose one.
 
 ### Card Types:
 

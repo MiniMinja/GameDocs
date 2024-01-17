@@ -21,19 +21,21 @@ def displayBox(msg):
 
 #Creation of Data
 class Card:
-    def __init__(self, name, text, effect):
+    def __init__(self, name, text, effects):
         self.name = name
         self.text = text
-        self.effect = effect
+        self.effects = effects
 
     def __str__(self):
-        return "\t" + self.name + ": " + self.effect
+        return "\t" + self.name + ": " + self.text
 
 class Effect:
-    def __init__(self, name, target, effectFunc):
-        self.name = name
-        self.target = target
+    def __init__(self, val, effectFunc):
+        self.val = val
         self.effectFunc = effectFunc
+
+    def execute(self, source, target):
+        pass
 
 class Potion:
     def __init__(self):
@@ -47,6 +49,11 @@ class Player:
         self.hand = []
         self.maxHealth = maxHealth
         self.health = maxHealth
+        self.statuses = {
+            'infliction': 0,
+            'frost': 0,
+            'weak': 0
+        }
 
     def gainCard(self, card):
         if(self.handSize() >= 7):
@@ -103,6 +110,12 @@ class Player:
     def applyPotion(self, potion, target):
         pass
 
+    def dealStatuses(self):
+        pass
+
+    def heal(self, val):
+        pass
+
 class CPUPlayer(Player):
     def takeTurn(self):
         pass
@@ -113,10 +126,10 @@ class Game:
 #Initialize All Cards
 card_reg = [
     Card('Healium', 'Restores Your Health', Effect(
-        
+        lambda target, val : target.heal(val)
     )),
     Card('Corrosite', 'Adds 1 \'Infliction\' to enemy', Effect(
-
+        lambda target, val: target.heal()
     )),
     Card('Slogium', 'Adds 1 \'Frost\' to enemy', Effect(
 
