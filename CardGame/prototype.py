@@ -29,14 +29,6 @@ class Card:
     def __str__(self):
         return "\t" + self.name + ": " + self.text
 
-class Effect:
-    def __init__(self, val, effectFunc):
-        self.val = val
-        self.effectFunc = effectFunc
-
-    def execute(self, source, target):
-        pass
-
 class Potion:
     def __init__(self):
         self.effects = []
@@ -110,6 +102,9 @@ class Player:
     def applyPotion(self, potion, target):
         pass
 
+    def applyStatus(self, status, val):
+        pass
+
     def dealStatuses(self):
         pass
 
@@ -125,13 +120,17 @@ class Game:
 
 #Initialize All Cards
 card_reg = [
-    Card('Healium', 'Restores Your Health', Effect(
-        lambda target, val : target.heal(val)
-    )),
-    Card('Corrosite', 'Adds 1 \'Infliction\' to enemy', Effect(
-        lambda target, val: target.heal()
-    )),
-    Card('Slogium', 'Adds 1 \'Frost\' to enemy', Effect(
-
-    )),
+    Card('Healium', 'Restores Your Health', [
+        lambda source, target : target.heal(val)
+    ]),
+    Card('Corrosite', 'Adds 1 \'Infliction\' to enemy', [
+        lambda source, target: target.applyStatus('infliction', 1)
+    ]),
+    Card('Slogium', 'Adds 1 \'Frost\' to enemy', [
+        lambda source, target: target.applyStatus('frost', 1)
+    ]),
+    Card('Angrium', 'Makes you Weak on opponent\'s turn. Adds 10 damage', [
+        lambda source, target: source.applyStatus('weak', 1),
+        lambda source, target: target.addDamage(10)
+    ])
 ]

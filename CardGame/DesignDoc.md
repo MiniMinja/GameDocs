@@ -3,7 +3,7 @@
 
 # Overview
 
-A basic deck-builder where you need to collect minerals
+A deck-builder where you need to collect minerals that you can combine to create powerful potions. Go on a (randomly generated) dungeon-crawling quest to face enemies on a 1-on-1 duel, eventually facing the final boss to win the game.
 
 You select a class.
 
@@ -11,9 +11,25 @@ You select a class.
 
 The overall objective is to bring the opponent health to 0.
 
-You draw a certain amount of mineral cards. You can play up to X mineral cards where X is the maximum capacity of a bottle. When you finish the construction of your bottle, you can get a token. Place that token on top of these ingredients to designate them as effects for your new potion.
+Each turn you can choose 1 out of 5 options:
 
-You can play your tokens to activate the effects of the potion. 
+1. Construct potion
+
+    - This allows you to combine ingredients into a potion. Keep the gathered ingredients in a pile somewhere for convenient use and gain a potion token.
+
+2. Place Potion
+
+    - At the cost of a potion token, you can place a potion (the stack of all ingredients) onto a land. The land effects affect the potion stored in it each turn.
+
+3. Throw Potion
+
+    - Take a potion that your holding or storing and target its effects onto your opponent. (_Ex_: If your potion deals damage, throwing it will deal damage to your opponent. _Ex2_: If your potion heals, throwing it will heal your opponent.)
+
+4. Drink Potion
+  
+    - Take a potion that your holding or storing and target its effects onto yourself (_Ex_: if your potion deals damage, it will deal damage to you. _Ex2_: if your potion heals, it will heal you.)
+
+5. Skip your turn
 
 # Enemies
 
