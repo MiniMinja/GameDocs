@@ -3,13 +3,15 @@
 
 # Overview
 
-A deck-builder where you need to collect minerals that you can combine to create powerful potions. Go on a (randomly generated) dungeon-crawling quest to face enemies on a 1-on-1 duel, eventually facing the final boss to win the game.
+A basic deck-builder where you need to collect minerals
 
 You select a class.
 
 # Core loop
 
 The overall objective is to bring the opponent health to 0.
+
+At the beginning of your turn, all status effects on you take effect (same goes for opponenet).
 
 Each turn you can choose 1 out of 5 options:
 
@@ -29,7 +31,7 @@ Each turn you can choose 1 out of 5 options:
   
     - Take a potion that your holding or storing and target its effects onto yourself (_Ex_: if your potion deals damage, it will deal damage to you. _Ex2_: if your potion heals, it will heal you.)
 
-5. Skip your turn
+5. Skip your turn 
 
 # Enemies
 
